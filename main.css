@@ -1,0 +1,41 @@
+* {
+  font-family: 'Arial';
+}
+
+body {
+  background-color: black;
+  font-family: 'Arial';
+  color: white;
+}
+
+.bb-logo {
+  margin: 10px;
+  font-size: 3em;
+  font-weight: 400;
+}
+
+#nav-items {
+  display: flex;
+  flex-direction: column;
+}
+
+#nav-links {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  color: #a19fac;
+  text-transform: uppercase;
+}
+
+#contact-links, a {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-end;
+  margin: 5px;
+  color: #2c2b3a;
+  text-decoration: none;
+}
+
+.nav-link {
+  margin: 20px;
+}

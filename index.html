@@ -13,16 +13,19 @@
         <div id="nav-container">
           
           <div id="bb">
-            <span class="bb-logo">{ BB }</span>
+            <a href="#front">
+              <span class="bb-logo">Brian</span>
+              <span class="bb-logo">Besaw</span>
+            </a>
           </div>
           
           <div id="nav-items">
             <ul id="nav-list">
               <li class="nav-link">
-                bio
+                <a href="#bio">bio</a>
               </li>
               <li class="nav-link">
-                projects
+                <a href="#projects">projects</a>
               </li>
               <li class="nav-link">
                 contact
@@ -52,6 +55,7 @@
         <!-- *** BODY CONTAINER *** -->
         <div id="body-container">
           <div id="front-panel" class="panel">
+            <a name="front"></a>
             <!-- front-headline -->
             <div id="front-headline">
               <span class="headline-highlight">Brian Besaw</span>
@@ -59,14 +63,37 @@
             </div>
           </div>
           <div id="bio-panel" class="panel">
+            <a name="bio"></a>
             <!-- bio -->
+            <img id="bio-img" src="./img/besawb1708s.jpg">
+            <div id="bio-body">
+              <div class="bio-text">
+                This is my bio text.  Some words are <span class="bio-highlight">highlighted</span> for emphasis.  Here I talk about things I like; my dogs, motorcycle, living in a warm climate, etc.
+              </div>
+              <div class="bio-text">
+                In this paragraph I talk about tech stuff like <span class="bio-highlight">node</span> and <span class="bio-highlight">react</span>.  Maybe I mention how I've always loved programming and learning new languages like <span class="bio-highlight">python</span>.
+              </div>
+            </div>  
           </div>
-          <div id="project-panel" class="panel">
+          <div id="projects-panel" class="panel">
+            <a name="projects"></a>
             <!-- project-panel -->
+            <div id="projects-list">
+              <div class="project-container">
+                <img class="project-ss" src="./img/buzz-kill-main.png">
+                <div class="project-title">
+                  Buzz-Kill
+                </div>
+                <div class="project-text">
+                  Buzz-Kill helps establishments that serve alcohol provide for their patrons' safety and guest experience by maintaining a real-time estimate of each patron's bac in a user-friendly format.
+                </div>
+              </div>
+            </div>
           </div>
-          <div id="contact-panel" class="panel">
-            <!-- contact-panel -->
-          </div>
+        </div>
+
+        <div id="contact-panel" class="panel">
+          <!-- contact-panel -->
         </div>
         <!-- *** END OF BODY CONTAINER *** -->
       </div>

@@ -4,7 +4,7 @@
 
 body, #container {
   height: 100%;
-  background-color: black;
+  background: linear-gradient(#333333, #121212 );
   font-family: 'Arial';
   color: white;
 }
@@ -16,30 +16,34 @@ body, #container {
 
 .bb-logo {
   margin: 10px;
-  font-size: 3em;
-  font-weight: 600;
+  font-size: 1.5em;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 #nav-container {
+  position: fixed;
   display: flex;
   height: 100vh;
   width: 20%;
   margin-right: 5%;
   justify-content: space-between;
   flex-direction: column;
-  /* border-right: 1px solid #088c6f; */
 }
 
 #body-container {
   width: 50%;
+  margin-left: 25%;
 }
 
-#bb, #nav-items, #nav-contact-items {
-}
-
-#bb {
-  margin: 10px 30px;
-  color: #cdcedc;
+#bb, #bb a {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  text-decoration: none;
+  line-height: 0.4em;
+  margin: 10px;
+  color: #CDCEDC;
 }
 
 #nav-items {
@@ -50,23 +54,31 @@ body, #container {
   text-transform: uppercase;
 }
 
-.nav-link {
+.nav-link, .nav-link a {
   width: 100%;
   margin: 70px 30px;
-  color: #088c6f;
-  border-bottom: 2px solid #088c6f; /* 1DCD9F is brighter compliment to this */
+  font-size: 1.1em;
+  color: #6FE8CA;
+  border-bottom: 2px solid #6FE8CA;
+  text-decoration: none; 
 }
 
 #nav-contact-list {
   display: flex;
   justify-content: space-around;
   margin: 5px 30px;
-  color: #333;
+  color: #666;
   font-weight: 600;
 }
 
-#front-panel {
+#front-panel, #bio-panel, #projects-panel {
   height: 100vh;
+  margin-left: 5%;
+}
+
+#bio-panel {
+  display: flex;
+  flex-direction: row;
 }
 
 #front-headline {
@@ -80,11 +92,57 @@ body, #container {
 }
 
 .headline-highlight {
-  color: #1DcD9F;
+  color: #85FEDE;
   margin-left: 60px;
 }
 
 .headline-body {
-  color: #cdcedc;
+  color: #CDCEDC;
   margin-left: 120px;
+}
+
+#bio-img {
+  height: 150px;
+  margin: 200px 20px 20px 0;
+}
+
+#bio-body {
+  display: flex;
+  flex-direction: column;
+  margin-top: 200px;
+  font-size: 1.8em;
+  line-height: 1.5em;
+}
+
+.bio-text {
+  color: #999;
+  margin-bottom: 1em;
+}
+
+.bio-highlight {
+  color: #85FEDE;
+  font-weight: 600;
+}
+
+.project-ss {
+  height: 200px;
+  margin: 10px auto;
+}
+
+.project-container {
+  margin: 100px 0;
+}
+
+.project-title {
+  color: #85FEDE;
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+  margin-left: 20px;
+}
+
+.project-text {
+  font-size: 1.2em;
+  color: #999;
+  line-height: 1.5em;
 }

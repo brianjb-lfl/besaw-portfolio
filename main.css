@@ -54,13 +54,16 @@ body, #container {
   text-transform: uppercase;
 }
 
-.nav-link, .nav-link a {
+.nav-link {
   width: 100%;
   margin: 70px 30px;
   font-size: 1.1em;
-  color: #6FE8CA;
   border-bottom: 2px solid #6FE8CA;
-  text-decoration: none; 
+}
+
+.nav-link a {
+  color: #6FE8CA;
+  text-decoration: none;
 }
 
 #nav-contact-list {
@@ -71,14 +74,9 @@ body, #container {
   font-weight: 600;
 }
 
-#front-panel, #bio-panel, #projects-panel {
+.panel {
   height: 100vh;
   margin-left: 5%;
-}
-
-#bio-panel {
-  display: flex;
-  flex-direction: row;
 }
 
 #front-headline {
@@ -102,13 +100,12 @@ body, #container {
 }
 
 #bio-img {
-  height: 150px;
-  margin: 200px 20px 20px 0;
+  float: left;
+  width: 20%;
+  margin: 20px;
 }
 
 #bio-body {
-  display: flex;
-  flex-direction: column;
   margin-top: 200px;
   font-size: 1.8em;
   line-height: 1.5em;
@@ -145,4 +142,24 @@ body, #container {
   font-size: 1.2em;
   color: #999;
   line-height: 1.5em;
+}
+
+#tech-body {
+  display: flex;
+  margin-top: 50px;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.tech-group li, #contact-list li {
+  color: #85FEDE;
+  text-decoration: none;
+  font-size: 1.5em;
+  line-height: 2.0em;
+}
+
+#contact-body {
+  display: flex;
+  justify-content: center;
+  margin: 50px auto;
 }

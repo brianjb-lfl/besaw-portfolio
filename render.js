@@ -13,8 +13,11 @@ function render() {
   };
 
   $('.nav-link').removeClass('nav-selected');
-  $(`li:contains("${STORE.appState}")`).addClass('nav-selected');
+  if(STORE.appState !== 'front') {
+    $(`li:contains("${STORE.appState}")`).addClass('nav-selected');
+  }
 
+  console.log('running panel switch');
   $('.panel').addClass('hidden');
   $(`#${panelSelector[STORE.appState]}`).removeClass('hidden');
 

@@ -36,7 +36,7 @@ body, #container {
 }
 
 #body-container {
-  width: 50%;
+  width: 60%;
   margin-left: 25%;
 }
 
@@ -100,12 +100,13 @@ body, #container {
 
 .headline-highlight {
   color: #85FEDE;
-  margin-left: 60px;
+  margin-top: 50vh;
+  margin-left: 10vw;
 }
 
 .headline-body {
   color: #CDCEDC;
-  margin-left: 120px;
+  text-align: right;
 }
 
 #bio-img {

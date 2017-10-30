@@ -5,6 +5,14 @@ let STORE = {
   appState: 'front',      // front, bio, projects, tech, contact
 };
 
+function handleLogoClick() {
+  $('.bb-logo').on('click', () => {
+    console.log('logo click ran');
+    STORE.appState = 'front';
+    render();
+  });
+}
+
 function handleNavClick() {
   $('#nav-list').on('click', 'a', e => {
     if(STORE.appState === e.target.text) {
@@ -18,6 +26,7 @@ function handleNavClick() {
 }
 
 function handlePortf() {
+  handleLogoClick();
   handleNavClick();
   render();
 }

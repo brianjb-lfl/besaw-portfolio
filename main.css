@@ -2,6 +2,10 @@
   font-family: 'Arial';
 }
 
+.hidden {
+  display: none;
+}
+
 body, #container {
   height: 100%;
   background: linear-gradient(#333333, #121212 );
@@ -66,6 +70,11 @@ body, #container {
   text-decoration: none;
 }
 
+.nav-selected a {
+  background: #6FE8CA;
+  color: #333;
+}
+
 #nav-contact-list {
   display: flex;
   justify-content: space-around;
@@ -75,7 +84,7 @@ body, #container {
 }
 
 .panel {
-  height: 100vh;
+  min-height: 100vh;
   margin-left: 5%;
 }
 

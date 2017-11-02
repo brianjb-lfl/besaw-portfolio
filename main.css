@@ -10,6 +10,13 @@
   display: flex;
 }
 
+body, #container {
+  height: 100%;
+  background: linear-gradient(#333333, #121212 );
+  font-family: 'Arial';
+  color: white;
+}
+
 #container {
   display: flex;
   flex-direction: column;
@@ -24,6 +31,8 @@
   justify-content: space-between;
   flex-direction: row;
   border-bottom: 2px solid #6FE8CA;
+  background-color: #333333;
+  opacity: 1;
 }
 
 .bb-logo {
@@ -108,16 +117,9 @@
   z-index: 1;
 }
 
-body, #container {
-  height: 100%;
-  background: linear-gradient(#333333, #121212 );
-  font-family: 'Arial';
-  color: white;
-}
-
 .panel {
   min-height: 100vh;
-  margin-left: 5%;
+  z-index: 1;
 }
 
 #front-headline {
@@ -133,13 +135,23 @@ body, #container {
 .headline-highlight {
   color: #85FEDE;
   margin-top: 50vh;
-  margin-left: 5vw;
+  margin-left: 10vw;
 }
 
 .headline-body {
   color: #CDCEDC;
   text-align: right;
-  margin-right: 5vw;
+  margin-right: 10vw;
+}
+
+#bio-panel {
+  padding-top: 75px;
+  width: 80vw;
+  margin: 0 auto;
+}
+
+#bio-body {
+  margin-top: 20px;
 }
 
 #bio-img {
@@ -148,41 +160,48 @@ body, #container {
   margin: 0 20px 20px 0;
 }
 
-#bio-body {
-  width: 80vw;
-  margin: 0 auto;
-  padding-top: 150px;
+#bio-body p {
+  margin-bottom: 1.5em;
   font-size: 1.2em;
-  line-height: 1.2em;
+  line-height: 1.5em;
   color: #999;
 }
 
-.bio-highlight {
+#bio-body p strong {
   color: #85FEDE;
   font-weight: 600;
 }
 
-.project-ss {
-  height: 200px;
-  margin: 10px auto;
+h1 {
+  font-size: 1.5em;
+}
+
+#projects-panel {
+  padding-top: 75px;
+  width: 80vw;
+  margin: 0 auto;
 }
 
 .project-container {
-  margin: 100px 0;
+  margin-top: 20px;
+}
+
+.project-ss {
+  height: 120px;
+  margin: 10px auto;
 }
 
 .project-title {
   color: #85FEDE;
   font-size: 1.2em;
   font-weight: 600;
-  margin-bottom: 0.5em;
-  margin-left: 20px;
+  margin-bottom: 0.1em;
 }
 
 .project-text {
-  font-size: 1.2em;
+  font-size: 0.9em;
   color: #999;
-  line-height: 1.5em;
+  line-height: 1.4em;
 }
 
 #tech-body {

@@ -8,9 +8,9 @@
         <link rel="stylesheet" type="text/css" href="./main.css">
     </head>
     <body>
-      <div id="container">
+      <section id="container" role="region">
         <!-- *** NAV CONTAINER *** -->
-        <div id="nav-container">
+        <section id="nav-container" role="region">
           
           <div id="bb">
             <a href="#front">
@@ -59,20 +59,20 @@
             <div class="hamburger-stripe"></div>
           </div>
 
-        </div>
-
+        </section>
         <!-- *** END OF NAV CONTAINER *** -->
+
         <!-- *** BODY CONTAINER *** -->
-        <div id="body-container">
-          <div id="front-panel" class="panel">
+        <section id="body-container" role="region">
+          <section id="front-panel" class="panel" role="region">
             <a name="front"></a>
             <!-- front-headline -->
             <div id="front-headline">
               <span class="headline-highlight">Brian Besaw</span>
               <span class="headline-body">designs cool apps</span>
             </div>
-          </div>
-          <div id="bio-panel" class="panel">
+          </section>
+          <section id="bio-panel" class="panel" role="region">
             <a name="bio"></a>
             <!-- bio -->
             <h1>About Me</h1>
@@ -81,8 +81,9 @@
               This is my bio text.  Some words are <span class="bio-highlight">highlighted</span> for emphasis.  Here I talk about things I like; my dogs, motorcycle, living in a warm climate, etc.<br><br>
               In this paragraph I talk about tech stuff like <span class="bio-highlight">node</span> and <span class="bio-highlight">react</span>.  Maybe I mention how I've always loved programming and learning new languages like <span class="bio-highlight">python</span>.
             </div>  
-          </div>
-          <div id="projects-panel" class="panel">
+          </section>
+          
+          <section id="projects-panel" class="panel" role="region">
             <a name="projects"></a>
             <!-- project-panel -->
             <h1>Projects</h1>
@@ -97,8 +98,9 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div id="tech-panel" class="panel">
+          </section>
+          
+          <section id="tech-panel" class="panel" role="region">
             <a name="tech"></a>
             <!-- tech-panel -->
             <h1>Tech</h1>
@@ -119,8 +121,9 @@
                 <li>Mongoose</li>
               </ul>
             </div>
-          </div>
-          <div id="contact-panel" class="panel">
+          </section>
+
+          <section id="contact-panel" class="panel" role="region">
             <a name="contact"></a>
             <!-- contact-panel -->
             <h1>Contact Me</h1>
@@ -132,9 +135,10 @@
                 <li>GitHub</li>
               </ul>
             </div>
-          </div>
-        </div>  <!-- *** END OF BODY CONTAINER *** -->
-      </div>    <!-- *** END OF CONTAINER *** -->
+          </section>
+
+        </section>  <!-- *** END OF BODY CONTAINER *** -->
+      </section>    <!-- *** END OF CONTAINER *** -->
       <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
       <script src="./app.js"></script>
       <script src="./render.js"></script>

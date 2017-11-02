@@ -17,9 +17,18 @@ function render() {
     $(`li:contains("${STORE.appState}")`).addClass('nav-selected');
   }
 
-  console.log('running panel switch');
   $('.panel').addClass('hidden');
   $(`#${panelSelector[STORE.appState]}`).removeClass('hidden');
+
+  if (STORE.navItems === 'hidden') {
+    $('#nav-items').addClass('hidden');
+    $('#nav-items').removeClass('flex');
+  }
+  else {
+    $('#nav-items').addClass('flex');
+    $('#nav-items').removeClass('hidden');   
+  }
+
 
 }
 

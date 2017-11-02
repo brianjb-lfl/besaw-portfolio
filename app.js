@@ -1,8 +1,9 @@
 'use strict';
-/*global render $ */
+/*global render $  */
 
 let STORE = {
   appState: 'front',      // front, bio, projects, tech, contact
+  navItems: 'hidden',     // hidden, visible
 };
 
 function handleLogoClick() {
@@ -21,6 +22,17 @@ function handleNavClick() {
     else {
       STORE.appState = e.target.text;
     }
+    if ($(window).width() < 576) {
+      STORE.navItems = 'hidden';
+    }
+    render();
+  });
+}
+
+function handleBurgerClick() {
+  $('#hamburger').on('click', () => {
+    console.log(STORE.navItems);
+    STORE.navItems === 'hidden' ? STORE.navItems = 'visible' : STORE.navItems = 'hidden';
     render();
   });
 }
@@ -28,6 +40,7 @@ function handleNavClick() {
 function handlePortf() {
   handleLogoClick();
   handleNavClick();
+  handleBurgerClick();
   render();
 }
 

@@ -6,6 +6,7 @@
         <title>Brian Besaw's Portfolio</title>
         <link rel="stylesheet" type="text/css" href="./reset.css">
         <link rel="stylesheet" type="text/css" href="./main.css">
+        <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
     </head>
     <body>
       <section id="container" role="region">
@@ -36,13 +37,21 @@
           </div>
           
           <div id="nav-contact-items">
-            <span>e</span>  <!-- email link and icon here -->
-            <span>T</span>  <!-- twitter link and icon here -->
-            <span>in</span> <!-- linkedIN link and icon here -->
-            <span>G</span>  <!-- GitHub link and icon here -->
+            <a href="mailto:bjbesaw@outlook.com?Subject=Saw%20your%20profile" target="_top">
+              <span class="fa fa-envelope"></span>  <!-- email link and icon here -->
+            </a>
+            <a href="https://twitter.com/besaw_dev" target="_blank">
+              <span class="fa fa-twitter"></span>  <!-- twitter link and icon here -->
+            </a>
+            <a href="https://www.linkedin.com/in/brianbesaw/" target="_blank">
+              <span class="fa fa-linkedin"></span> <!-- linkedIN link and icon here -->
+            </a>
+            <a href="https://github.com/brianjb-lfl" target="_blank">
+              <span class="fa fa-github"></span>  <!-- GitHub link and icon here -->
+            </a>
           </div>
 
-          <div class="hamburger">
+          <div id="hamburger">
             <div class="hamburger-stripe"></div>
             <div class="hamburger-stripe"></div>
             <div class="hamburger-stripe"></div>
@@ -53,6 +62,7 @@
 
         <!-- *** BODY CONTAINER *** -->
         <section id="body-container" role="region">
+          
           <section id="front-panel" class="panel" role="region">
             <a name="front"></a>
             <!-- front-headline -->
@@ -61,10 +71,10 @@
               <span class="headline-body">designs cool apps</span>
             </div>
           </section>
+          
           <section id="bio-panel" class="panel" role="region">
             <a name="bio"></a>
             <!-- bio -->
-            <h1>About Me</h1>
             <div id="bio-body">
               <img id="bio-img" src="./img/besawb1708s.jpg">
               This is my bio text.  Some words are <span class="bio-highlight">highlighted</span> for emphasis.  Here I talk about things I like; my dogs, motorcycle, living in a warm climate, etc.<br><br>

@@ -249,6 +249,7 @@ h1 {
 
   .nav-link {
     margin: 20px 0 20px 20px;
+    width: 18vw;
     border-bottom: 2px solid #6FE8CA;
   }
 
@@ -294,5 +295,18 @@ h1 {
     margin: 0 auto;
     padding-top: 50px;
   }
+
+}
+
+@media (min-width: 992px) {
+
+  .panel {
+    width: 700px;
+  }
+
+  #nav-container {
+    width: 25vw;
+  }
+
 
 }

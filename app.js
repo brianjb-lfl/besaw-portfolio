@@ -4,6 +4,7 @@
 let STORE = {
   appState: 'front',      // front, bio, projects, tech, contact
   navItems: 'hidden',     // hidden, visible
+  narrowCutoff: 576,      // pixel width cutoff for narrow screen
 };
 
 function handleLogoClick() {
@@ -22,7 +23,7 @@ function handleNavClick() {
     else {
       STORE.appState = e.target.text;
     }
-    if ($(window).width() < 576) {
+    if ($(window).width() < STORE.narrowCutoff) {
       STORE.navItems = 'hidden';
     }
     render();

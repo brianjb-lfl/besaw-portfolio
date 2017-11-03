@@ -83,7 +83,7 @@ body, #container {
 
 .nav-link {
   margin: 30px;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 .nav-link a {
@@ -120,6 +120,9 @@ body, #container {
 .panel {
   min-height: 100vh;
   z-index: 1;
+  width: 80vw;
+  margin: 0 auto;
+  padding-top: 75px;
 }
 
 #front-headline {
@@ -142,12 +145,6 @@ body, #container {
   color: #CDCEDC;
   text-align: right;
   margin-right: 10vw;
-}
-
-#bio-panel {
-  padding-top: 75px;
-  width: 80vw;
-  margin: 0 auto;
 }
 
 #bio-body {
@@ -174,12 +171,6 @@ body, #container {
 
 h1 {
   font-size: 1.5em;
-}
-
-#projects-panel {
-  padding-top: 75px;
-  width: 80vw;
-  margin: 0 auto;
 }
 
 .project-container {
@@ -235,26 +226,73 @@ h1 {
     position: fixed;
     display: flex;
     height: 100vh;
-    width: 20%;
+    width: 20vw;
     margin-right: 5%;
     justify-content: space-between;
     flex-direction: column;
+    background-color: inherit;
   }
 
-  #body-container {
-    width: 60%;
-    margin-left: 25%;
+  #nav-items {
+    position: relative;
+    display: flex;
+    flex: 2;
+    background-color: inherit;
   }
 
-  .hamburger {
-    display: none;
+  #bb {
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+    margin-top: 10px;
   }
 
   .nav-link {
-    width: 100%;
-    margin: 70px 30px;
-    font-size: 1.1em;
+    margin: 20px 0 20px 20px;
     border-bottom: 2px solid #6FE8CA;
+  }
+
+  #nav-contact-items {
+    width: 175px;
+    margin-right: 32px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex: 1;
+    align-items: flex-end;
+  }
+
+  #body-container {
+    width: 80vw;
+    margin-left: 20vw;
+  }
+
+  #hamburger {
+    display: none;
+  }
+
+  #front-panel {
+    width: 450px;
+    margin: 0 auto;
+  }
+
+  .headline-highlight {
+    color: #85FEDE;
+    margin-top: 50vh;
+    margin-left: 36px;
+  }
+  
+  .headline-body {
+    color: #CDCEDC;
+    text-align: right;
+    margin-right: 36px;
+  }
+
+  .panel {
+    width: 70vw;
+    margin: 0 auto;
+    padding-top: 50px;
   }
 
 }

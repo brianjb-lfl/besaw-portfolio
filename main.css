@@ -222,20 +222,29 @@ h1 {
     justify-content: row;
   }
   
+  .panel {
+    width: 70vw;
+    margin: 0 auto;
+    padding-top: 50px;
+    border: 1px solid aqua;
+  }
+
   #nav-container {
     position: fixed;
     display: flex;
     height: 100vh;
-    width: 20vw;
-    margin-right: 5%;
+    width: 18vw;
+    margin: 0 2vw;
     justify-content: space-between;
     flex-direction: column;
     background-color: inherit;
+    border: 1px solid yellow;
   }
 
   #nav-items {
     position: relative;
     display: flex;
+    width: 100%;
     flex: 2;
     background-color: inherit;
   }
@@ -248,7 +257,7 @@ h1 {
   }
 
   .nav-link {
-    margin: 20px 0 20px 20px;
+    margin: 20px 0;
     width: 18vw;
     border-bottom: 2px solid #6FE8CA;
   }
@@ -273,27 +282,23 @@ h1 {
     display: none;
   }
 
-  #front-panel {
-    width: 450px;
-    margin: 0 auto;
+  #front-headline {
+    margin: 50vh auto 0 auto;
+    width: 400px;
   }
 
   .headline-highlight {
     color: #85FEDE;
-    margin-top: 50vh;
-    margin-left: 36px;
+    width: 100%;
+    margin: 0;
+    text-align: left;
   }
   
   .headline-body {
     color: #CDCEDC;
+    width: 100%;
+    margin: 0;
     text-align: right;
-    margin-right: 36px;
-  }
-
-  .panel {
-    width: 70vw;
-    margin: 0 auto;
-    padding-top: 50px;
   }
 
 }
@@ -301,12 +306,18 @@ h1 {
 @media (min-width: 992px) {
 
   .panel {
-    width: 700px;
+    width: 800px;
+    margin-left: 300px;
+    border: 1px solid #41c241;
   }
 
   #nav-container {
-    width: 25vw;
+    width: 250px;
+    margin-right: 50px;
   }
 
+  .nav-link {
+    width: 180px;
+  }
 
 }

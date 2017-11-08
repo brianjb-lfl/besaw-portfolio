@@ -14,7 +14,7 @@ body, #container {
   height: 100vh;
   padding: 0;
   margin: 0;
-  background: linear-gradient(#333333, #121212 );
+  background: linear-gradient(to bottom right,#4d4d4d, #121212 );
   font-family: 'Arial';
   color: white;
 }
@@ -229,7 +229,6 @@ h1 {
     margin: 0 auto;
     vertical-align: top;
     padding-top: 50px;
-    border: 1px solid aqua;
   }
 
   #nav-container {
@@ -241,7 +240,6 @@ h1 {
     justify-content: space-between;
     flex-direction: column;
     background-color: inherit;
-    border: 1px solid yellow;
   }
 
   #nav-items {
@@ -259,10 +257,20 @@ h1 {
     margin-top: 10px;
   }
 
+  .bb-logo:hover {
+    color: white;
+    font-weight: 600;
+  }
+
   .nav-link {
     margin: 20px 0;
     width: 18vw;
     border-bottom: 2px solid #6FE8CA;
+  }
+
+  .nav-link a:hover {
+    color: #85FEDE;
+    font-weight: 600;
   }
 
   #nav-contact-items {
@@ -274,6 +282,12 @@ h1 {
     justify-content: space-around;
     flex: 1;
     align-items: flex-end;
+  }
+
+  #nav-contact-items a:hover {
+    font-size: 1.0em;
+    color: white;
+    font-weight: 600;
   }
 
   #body-container {

@@ -14,7 +14,7 @@ body, #container {
   height: 100vh;
   padding: 0;
   margin: 0;
-  background: linear-gradient(to bottom right,#4d4d4d, #121212 );
+  background: linear-gradient(to bottom, #4d4d4d, #121212 );
   font-family: 'Arial';
   color: white;
 }
@@ -300,7 +300,7 @@ h1 {
   }
 
   #front-headline {
-    margin: 30vh auto 0 auto;
+    margin: 40vh auto 0 auto;
     width: 400px;
   }
 

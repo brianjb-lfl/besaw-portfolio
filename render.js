@@ -18,7 +18,12 @@ function render() {
   }
 
   $('.panel').addClass('hidden');
-  $(`#${panelSelector[STORE.appState]}`).removeClass('hidden');
+  if(!STORE.projDetail){
+    $(`#${panelSelector[STORE.appState]}`).removeClass('hidden');
+  }
+  else {
+    $(`#projdet-panel`).removeClass('hidden');
+  }
 
   if (STORE.navItems === 'hidden') {
     $('#nav-items').addClass('hidden');

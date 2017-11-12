@@ -3,6 +3,7 @@
 
 let STORE = {
   appState: 'front',      // front, bio, projects, tech, contact
+  projDetail: null,       // null or projectid
   navItems: 'hidden',     // hidden, visible
   narrowCutoff: 576,      // pixel width cutoff for narrow screen
 };

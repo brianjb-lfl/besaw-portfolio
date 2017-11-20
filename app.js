@@ -2,7 +2,7 @@
 /*global render $  */
 
 let STORE = {
-  appState: 'front',      // front, bio, projects, tech, contact
+  appState: 'front',      // front, bio, projects, tech, contact, pdetail
   projDetail: null,       // null or projectid
   navItems: 'hidden',     // hidden, visible
   narrowCutoff: 576,      // pixel width cutoff for narrow screen
@@ -39,10 +39,19 @@ function handleBurgerClick() {
   });
 }
 
+function handlePListClick() {
+  $('#projects-list').on('click', '.proj-sel', e => {
+    STORE.appState = 'pdetail';
+    STORE.projDetail = $(e.target).parent().attr('id');
+    render();
+  })
+}
+
 function handlePortf() {
   handleLogoClick();
   handleNavClick();
   handleBurgerClick();
+  handlePListClick();
   render();
 }
 

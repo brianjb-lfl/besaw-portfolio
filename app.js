@@ -42,9 +42,9 @@ function handleBurgerClick() {
 function handlePListClick() {
   $('#projects-list').on('click', '.proj-sel', e => {
     STORE.appState = 'pdetail';
-    STORE.projDetail = $(e.target).parent().attr('id');
+    STORE.projDetail = $(e.target).attr('id');
     render();
-  })
+  });
 }
 
 function handlePortf() {

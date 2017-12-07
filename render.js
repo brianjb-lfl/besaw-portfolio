@@ -54,14 +54,14 @@ function render() {
 function getPCode(pSumm) {
   return (
     `
-      <div class="project-container" id="${pSumm.id}">
+      <div class="project-container">
         <div class="project-title proj-sel">
           ${pSumm.title}
         </div>
         <table>
           <tr>
             <td>
-              <img class="project-ss proj-sel" src="${pSumm.img}">
+              <img class="project-ss proj-sel" id="${pSumm.id}" src="${pSumm.img}">
             </td>
             <td class="proj-text-cell">
               <div class="project-text">

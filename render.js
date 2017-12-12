@@ -44,7 +44,8 @@ function render() {
     $('#projects-list').html(pStr);
   }
   else if(STORE.appState === 'pdetail') {
-    $('#projectD-body').html(getPBody());
+    //$('#projectD-body').html(getPBody());
+    renderPBody(content.projectDetails[STORE.projDetail]);
   }
 
 }
@@ -76,10 +77,28 @@ function getPCode(pSumm) {
   );
 }
 
-function getPBody() {
-  return (
-    `
-      <span>${content.projectDetails[STORE.projDetail].title}</span>
-    `
-  );
-}
+function renderPBody(pObj) {
+  // project title
+  $('#project-title').html(pObj.title);
+  
+  // project image(s)
+  const pImgStr = `<img src="${pObj.img}"/>`
+  $('#project-imgs').html(pImgStr);
+  
+  // project links
+  let pLinkStr = pObj.links.map( item => 
+    `<li>${item.label}: ${item.link}</li>`);
+  pLinkStr = pLinkStr.join('');
+  pLinkStr = '<ul>' + pLinkStr + '</ul>';
+  $('#project-links').html(pLinkStr);
+
+  // project desc
+  $('#project-desc').html(pObj.summary);
+
+  // project tech
+  let pTechStr = pObj.tech.map( item => `<li>${item}</li>`);
+  pTechStr = pTechStr.join('');
+  pTechStr = '<ul>' + pTechStr + '</ul>';
+  $('#project-tech').html(pTechStr);
+};
+

@@ -61,7 +61,7 @@ function getPCode(pSumm) {
         </div>
         <table>
           <tr>
-            <td>
+            <td width="30%">
               <img class="project-ss proj-sel" id="${pSumm.id}" src="${pSumm.img}">
             </td>
             <td class="proj-text-cell">

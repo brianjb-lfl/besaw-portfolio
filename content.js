@@ -4,8 +4,8 @@ const content = {
 
   bioText: 
     '<img id="bio-img" src="./img/besawb1708s.jpg">' +
-    '<p>This is my bio text.  Some words are <strong>highlighted</strong> for emphasis.  Here I talk about things I like; my dogs, motorcycle, living in a warm climate, etc.</p>' +
-    '<p>In this paragraph I talk about tech stuff like <strong>node</strong> and <strong>react</strong>.  Maybe I mention how I\'ve always loved programming and learning new languages like <strong>python</strong>.</p>',
+    '<p>Programming is not my vocation – <strong>it’s my passion.</strong>  I love to code cool stuff and see it come to life on the screen.  After over two decades of coding, I’ve got <strong>a lot of tools</strong> in my belt, but Javascript and Python are my favorites. I also enjoy working with databases, as a result of my <strong>finance and accounting background</strong>.</p>' +
+    '<p>When not at a keyboard, I may be found cruising the back roads on my motorcycle, strolling with my dogs, or finding some other way to enjoy the beautiful central Florida climate.</p>',
 
   projectSumms:
     [

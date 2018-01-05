@@ -9,49 +9,27 @@ let STORE = {
 };
 
 function handleLogoClick() {
-  $('.bb-logo').on('click', () => {
+  $('.bb').on('click', e => {
+    e.preventDefault();
     console.log('logo click ran');
-    STORE.appState = 'front';
+    console.log(location.search);
+    location.assign("file:///C:/Users/bjbes/Documents/PROJECTS/besaw-portfolio/index.html?bbclicked");
     render();
   });
 }
 
-function handleNavClick() {
-  $('#nav-list').on('click', 'a', e => {
-    if(STORE.appState === e.target.text) {
-      STORE.appState = 'front';
-    }
-    else {
-      STORE.appState = e.target.text;
-    }
-    if ($(window).width() < STORE.narrowCutoff) {
-      STORE.navItems = 'hidden';
-    }
-    render();
-  });
-}
-
-function handleBurgerClick() {
-  $('#hamburger').on('click', () => {
-    console.log(STORE.navItems);
-    STORE.navItems === 'hidden' ? STORE.navItems = 'visible' : STORE.navItems = 'hidden';
-    render();
-  });
-}
-
-function handlePListClick() {
-  $('#projects-list').on('click', '.proj-sel', e => {
-    STORE.appState = 'pdetail';
-    STORE.projDetail = $(e.target).attr('id');
-    render();
+function handleNavItemsClick() {
+  $('.nav-items').on('click', 'a', e => {
+    e.preventDefault();
+    console.log(e.target.text);
+    const locationStr = "file:///C:/Users/bjbes/Documents/PROJECTS/besaw-portfolio/index.html?page=" + e.target.text;
+    location.assign(locationStr);
   });
 }
 
 function handlePortf() {
   handleLogoClick();
-  handleNavClick();
-  handleBurgerClick();
-  handlePListClick();
+  handleNavItemsClick();
   render();
 }
 

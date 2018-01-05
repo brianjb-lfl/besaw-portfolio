@@ -4,101 +4,110 @@
 
 function render() {
 
-  const panelSelector = {
-    front: 'front-panel',
-    bio: 'bio-panel',
-    projects: 'projects-panel',
-    tech: 'tech-panel',
-    contact: 'contact-panel',
-    pdetail: 'pdetail-panel'
+  let targetPage = 'home';
+
+  // hide all content divs
+  $('.content-div').removeClass('flex');
+  $('.content-div').addClass('hidden');
+  // call f to check for url params and get location target
+  let locationObj = parseUrlParams();
+  targetPage = locationObj.page;
+  // uncover target content div
+  $(`.${targetPage}-section`).removeClass('hidden');
+  $(`.${targetPage}-section`).addClass('flex');
+
+  // render target div
+  // default is 'home' - no programatic render required
+  switch(targetPage) {
+    case 'about':
+      $('.about-section').html(getAboutCode());
+      break;
+
+    case 'projects':
+      $('.projects-section').html(getProjectsCode());
+      break;
+
+    case 'pdetail':
+      $('.pdetail-section').html(getProjDetailCode());
+      break;
+  }
+
+
+}
+
+// *** PARSE URL PARAMETERS
+function parseUrlParams() {
+  // create obj with default page
+  let urlParamObj = {
+    page: 'home',
+    projId: content.projectDetails.default
   };
 
-  // NAV
-  
-  $('.nav-link').removeClass('nav-selected');
-  
-  if(STORE.appState !== 'front') {
-    $(`li:contains("${STORE.appState}")`).addClass('nav-selected');
+  if(location.search) {
+    // split into array of params
+    location.search.slice(1).split('&').forEach( param => {
+      // use '=' to split param into key and value - add to obj
+      urlParamObj[param.split('=')[0]] = param.split('=')[1];
+    });
   }
 
-  if (STORE.navItems === 'hidden') {
-    $('#nav-items').addClass('hidden');
-    $('#nav-items').removeClass('flex');
-  }
-  else {
-    $('#nav-items').addClass('flex');
-    $('#nav-items').removeClass('hidden');   
-  }
-
-  // PANELS
-
-  $('.panel').addClass('hidden');
-  $(`#${panelSelector[STORE.appState]}`).removeClass('hidden');
-  
-  if(STORE.appState === 'bio'){
-    $('#bio-body').html(content.bioText);
-  }
-  else if(STORE.appState === 'projects') {
-    let pCode = content.projectSumms.map(getPCode);
-    const pStr = pCode.join('');
-    $('#projects-list').html(pStr);
-  }
-  else if(STORE.appState === 'pdetail') {
-    //$('#projectD-body').html(getPBody());
-    renderPBody(content.projectDetails[STORE.projDetail]);
-  }
-
+  return urlParamObj;
 }
 
-// helpers
+// *** ABOUT CODE BUILDER ***
+function getAboutCode() {
 
-function getPCode(pSumm) {
-  return (
+  // build contact li's
+  let contactStr = content.contactInfo.map( contactItem => {
+    return(
+      `
+        <li>
+          <a href=${contactItem.href}>
+            <span class=${contactItem.faCode}></span>
+            <span class="about-contact-list-text">${contactItem.text}</span>
+          </a>
+        </li>
+      `
+    );
+  }).join('');
+
+  // build body code for about section
+  let aboutStr = 
     `
-      <div class="project-container">
-        <div class="project-title proj-sel">
-          ${pSumm.title}
-        </div>
-        <table>
-          <tr>
-            <td width="30%">
-              <img class="project-ss proj-sel" id="${pSumm.id}" src="${pSumm.img}">
-            </td>
-            <td class="proj-text-cell">
-              <div class="project-text">
-                ${pSumm.text}
-                <span class="p-more">more</span>
-              </div>
-            </td>
-          </tr>
-        </table>
+      <h1>About me</h1>
+      <div class="about-body about-sub-section">
+          <img class="about-img" src="${content.aboutContent.imgSrc}"/>
+          ${content.aboutContent.aboutText}
       </div>
-    `
-  );
+      <div class="about-contact about-sub-section">
+        <ul>
+          ${contactStr}
+        </ul>
+      </div>
+    `;
+
+  return aboutStr;
 }
 
-function renderPBody(pObj) {
-  // project title
-  $('#project-title').html(pObj.title);
-  
-  // project image(s)
-  const pImgStr = `<img src="${pObj.img}"/>`
-  $('#project-imgs').html(pImgStr);
-  
-  // project links
-  let pLinkStr = pObj.links.map( item => 
-    `<li>${item.label}: ${item.link}</li>`);
-  pLinkStr = pLinkStr.join('');
-  pLinkStr = '<ul>' + pLinkStr + '</ul>';
-  $('#project-links').html(pLinkStr);
+// *** PROJECTS CODE BUILDER ***
+function getProjectsCode() {
+  let projectsListStr = content.projectSumms.map( project => {
+    return(
+      `
+        <div class="project-item" id="${project.id}">
+          <h3>${project.title}</h3>
+          <img class="project-thumbnail" src="${project.img}"/>
+          ${project.text}
+        </div>
+      `
+    );
+  }).join('');
 
-  // project desc
-  $('#project-desc').html(pObj.summary);
+  let projectsStr = 
+    `
+      <h1>Some of my work</h1>
+      ${projectsListStr}
+    `;
 
-  // project tech
-  let pTechStr = pObj.tech.map( item => `<li>${item}</li>`);
-  pTechStr = pTechStr.join('');
-  pTechStr = '<ul>' + pTechStr + '</ul>';
-  $('#project-tech').html(pTechStr);
-};
-
+  return projectsStr;
+}

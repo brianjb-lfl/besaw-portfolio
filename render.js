@@ -9,7 +9,7 @@ function render() {
   // hide all content divs
   $('.content-div').removeClass('flex');
   $('.content-div').addClass('hidden');
-  // call f to check for url params and get location target
+  // call sub to check for url params and get location target
   let locationObj = parseUrlParams();
   targetPage = locationObj.page;
   // uncover target content div
@@ -28,10 +28,9 @@ function render() {
       break;
 
     case 'pdetail':
-      $('.pdetail-section').html(getProjDetailCode());
+      $('.pdetail-section').html(getProjDetailCode(locationObj.proj_id));
       break;
   }
-
 
 }
 
@@ -40,7 +39,7 @@ function parseUrlParams() {
   // create obj with default page
   let urlParamObj = {
     page: 'home',
-    projId: content.projectDetails.default
+    proj_id: content.projectDetails.default
   };
 
   if(location.search) {
@@ -94,9 +93,9 @@ function getProjectsCode() {
   let projectsListStr = content.projectSumms.map( project => {
     return(
       `
-        <div class="project-item" id="${project.id}">
+        <div class="project-item">
           <h3>${project.title}</h3>
-          <img class="project-thumbnail" src="${project.img}"/>
+          <img class="project-thumbnail" id="${project.id}" src="${project.img}"/>
           ${project.text}
         </div>
       `
@@ -110,4 +109,45 @@ function getProjectsCode() {
     `;
 
   return projectsStr;
+}
+
+// *** PROJECT DETAIL BUILDER ***
+function getProjDetailCode(inProjId) {
+  const projData = content.projectDetails[inProjId];
+  let projLinkStr = projData.links.map( link => {
+    return(
+      `
+        <li>
+          <span class="project-link"><a href="${link.link}">${link.label}</a></span>
+        </li>
+      `
+    );
+  }).join('');
+
+  let projTechStr = projData.tech.map( techItem => {
+    return(
+      `
+        <li>
+          <span class="tech-list-item">${techItem}</span>
+        </li>
+      `
+    );
+  }).join('');
+
+  let projectDetStr =
+    `
+      <h1>${projData.title}</h1>
+      <img class="project-img" src="${projData.img}"/>
+      <p><strong>Summary:  </strong>${projData.summary}</p>
+      <span><strong>Links:  </strong></span>
+      <ul>
+        ${projLinkStr}
+      </ul>
+      <span><strong>Tech:  </strong></span>
+      <ul>
+        ${projTechStr}
+      </ul>
+    `;
+  
+  return projectDetStr;
 }

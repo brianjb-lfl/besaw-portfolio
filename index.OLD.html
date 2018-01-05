@@ -3,164 +3,159 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>J. Random Hacker</title>
+        <title>Brian Besaw's Portfolio</title>
+        <link rel="stylesheet" type="text/css" href="./reset.css">
+        <link rel="stylesheet" type="text/css" href="./main.css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-        <header>
-            <h1>J. Random Hacker</h1>
-            <nav class="main-nav">
-                <ul>
-                    <li class="main-nav-link"><a href="#about">About me</a></li>
-                    <li class="main-nav-link"><a href="#work">My work</a></li>
-                    <li class="main-nav-link"><a href="#contact">Contact me</a></li>
-                </ul>
-            </nav>
+      <section id="container" role="region">
+        <!-- *** NAV CONTAINER *** -->
+        <section id="nav-container" role="region">
+          
+          <div id="bb">
+            <a href="#front">
+              <span class="bb-logo">BB</span>
+            </a>
+          </div>
+          
+          <div id="nav-items">
+            <ul id="nav-list">
+              <li class="nav-link">
+                <a href="#bio">bio</a>
+              </li>
+              <li class="nav-link">
+                <a href="#projects">projects</a>
+              </li>
+              <li class="nav-link">
+                <a href="#tech">tech</a>
+              </li>
+              <li class="nav-link">
+                <a href="#contact">contact</a>
+              </li>
+            </ul>
+          </div>
+          
+          <div id="nav-contact-items">
+            <a href="mailto:bjbesaw@outlook.com?Subject=Saw%20your%20profile" target="_top">
+              <span class="fa fa-envelope"></span>  <!-- email link and icon here -->
+            </a>
+            <a href="https://twitter.com/besaw_dev" target="_blank">
+              <span class="fa fa-twitter"></span>  <!-- twitter link and icon here -->
+            </a>
+            <a href="https://www.linkedin.com/in/brianbesaw/" target="_blank">
+              <span class="fa fa-linkedin"></span> <!-- linkedIN link and icon here -->
+            </a>
+            <a href="https://github.com/brianjb-lfl" target="_blank">
+              <span class="fa fa-github"></span>  <!-- GitHub link and icon here -->
+            </a>
+          </div>
 
-            <img class="headshot" src="http://unsplash.it/150/150"
-                alt="J. Random Hacker headshot">
+          <div id="hamburger">
+            <div class="hamburger-stripe"></div>
+            <div class="hamburger-stripe"></div>
+            <div class="hamburger-stripe"></div>
+          </div>
 
-            <p class="about" id="about">
-                Hi, I'm J. Random Hacker, a full-stack web developer from Nowheresville, USA.  I use React and Node.js to build web apps which leave you with a minty fresh taste in your mouth.  Outside of coding I enjoy watching <a href="https://www.youtube.com/watch?v=6SFNW5F8K9Y">this video</a> on repeat.
-            </p>
-            <nav class="contact-links">
-                <ul>
-                    <li class="contact-link contact-link-email"><a href="mailto:jrandomhacker@example.com">Email</a>
-                    <li class="contact-link contact-link-linkedin"><a href="https://www.linkedin.com">LinkedIn</a>
-                    <li class="contact-link contact-link-github"><a href="https://www.github.com">GitHub</a>
-                </ul>
-            </nav>
-        </header>
-        <section class="work" id="work">
-            <h2>My work</h2>
-            <section class="project">
-                <h3>Frobnicator</h3>
-                <img class="project-image" src="http://unsplash.it/350/150?random&amp;bust=1"
-                    alt="Frobnicator screenshot">
-                <p class="project-description">
-                    A frob which allows you to frobnicate other frobs.
-                </p>
-                <ul class="project-stack">
-                    <li class="project-stack-item">
-                        React
-                    </li>
-                    <li class="project-stack-item">
-                        Redux
-                    </li>
-                    <li class="project-stack-item">
-                        Node.js
-                    </li>
-                </ul>
-                <nav class="project-links">
-                    <ul>
-                        <li class="project-link project-link-live">
-                            <a href="#">Live demo</a>
-                        </li>
-                        <li class="project-link project-link-github">
-                            <a href="#">Source code</a>
-                        </li>
-                    </ul>
-                </nav>
-            </section>
-            <section class="project">
-                <h3>FooBar</h3>
-                <img class="project-image" src="http://unsplash.it/350/150?random&amp;bust=2"
-                    alt="FooBar screenshot">
-                <p class="project-description">
-                    A foo which allows you to bar other bazes.
-                </p>
-                <ul class="project-stack">
-                    <li class="project-stack-item">
-                        React
-                    </li>
-                    <li class="project-stack-item">
-                        Redux
-                    </li>
-                    <li class="project-stack-item">
-                        Node.js
-                    </li>
-                </ul>
-                <nav class="project-links">
-                    <ul>
-                        <li class="project-link project-link-live">
-                            <a href="#">Live demo</a>
-                        </li>
-                        <li class="project-link project-link-github">
-                            <a href="#">Source code</a>
-                        </li>
-                    </ul>
-                </nav>
-            </section>
-            <section class="project">
-                <h3>AliceBob</h3>
-                <img class="project-image" src="http://unsplash.it/350/150?random&amp;bust=3"
-                    alt="AliceBob screenshot">
-                <p class="project-description">
-                    An Alice which allows you to Bob other Eves.
-                </p>
-                <ul class="project-stack">
-                    <li class="project-stack-item">
-                        React
-                    </li>
-                    <li class="project-stack-item">
-                        Redux
-                    </li>
-                    <li class="project-stack-item">
-                        Node.js
-                    </li>
-                </ul>
-                <nav class="project-links">
-                    <ul>
-                        <li class="project-link project-link-live">
-                            <a href="#">Live demo</a>
-                        </li>
-                        <li class="project-link project-link-github">
-                            <a href="#">Source code</a>
-                        </li>
-                    </ul>
-                </nav>
-            </section>
-            <section class="project">
-                <h3>Wibble</h3>
-                <img class="project-image" src="http://unsplash.it/350/150?random&amp;bust=4"
-                    alt="Wibble screenshot">
-                <p class="project-description">
-                    A wibble which allows you to wobble other wubbles.
-                </p>
-                <ul class="project-stack">
-                    <li class="project-stack-item">
-                        React
-                    </li>
-                    <li class="project-stack-item">
-                        Redux
-                    </li>
-                    <li class="project-stack-item">
-                        Node.js
-                    </li>
-                </ul>
-                <nav class="project-links">
-                    <ul>
-                        <li class="project-link project-link-live">
-                            <a href="#">Live demo</a>
-                        </li>
-                        <li class="project-link project-link-github">
-                            <a href="#">Source code</a>
-                        </li>
-                    </ul>
-                </nav>
-            </section>
         </section>
-        <section class="contact" id="contact">
-            <h2>Contact me</h2>
-            <form action="https://formspree.io/jrandomhacker@example.com"
-                  method="POST">
-                <label for="contact-form-name">Your Name</label>
-                <input type="text" name="name" id="contact-form-name" placeholder="Grace Hopper">
-                <label for="contact-form-email">Your Email Address</label>
-                <input type="email" name="_replyto" id="contact-form-email" placeholder="grace@example.com">
-                <label for="contact-form-message">Message</label>
-                <textarea name="message" id="contact-form-message"></textarea>
-                <input type="submit" value="Send message">
-            </form> 
-        </section>
+        <!-- *** END OF NAV CONTAINER *** -->
+
+        <!-- *** BODY CONTAINER *** -->
+        <section id="body-container" role="region">
+          
+          <a name="front"></a>
+          <!-- front-headline -->
+          <section id="front-panel" class="panel" role="region">
+            <div id="front-headline">
+              <span class="headline-highlight">Brian Besaw</span>
+              <span class="headline-body">designs cool apps</span>
+            </div>
+          </section>
+          
+          <a name="bio"></a>
+          <!-- bio -->
+          <section id="bio-panel" class="panel" role="region">
+            <div class="bio-content">
+              <h1>About Me</h1>
+              <div id="bio-body">
+                <!-- content.bioText here -->
+              </div>  
+            </div>
+          </section>
+
+          <a name="projects"></a>
+          <!-- projects-panel -->
+          <section id="projects-panel" class="panel" role="region">
+            <h1>Projects</h1>
+            <div id="projects-list">
+              <!-- project summaries here -->
+            </div>
+          </section>
+          
+          <a name="tech"></a>
+          <!-- tech-panel -->
+          <section id="tech-panel" class="panel" role="region">
+            <h1>Tech</h1>
+            <div id="tech-body">
+              <ul id="tech-front-end" class="tech-group">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JS</li>
+                <li>jQuery</li>
+                <li>React</li>
+                <li>Redux</li>
+                <li>Angular</li>
+                <li>Python</li>
+              </ul>
+              <ul id="tech-back-end" class="tech-group">
+                <li>Node.js</li>
+                <li>Express</li>
+                <li>RESTful APIs</li>
+                <li>MongoDB</li>
+                <li>Mongoose</li>
+              </ul>
+            </div>
+          </section>
+
+          <a name="contact"></a>
+          <!-- contact-panel -->
+          <section id="contact-panel" class="panel" role="region">
+            <h1>Contact Me</h1>
+            <div id="contact-body">
+              <ul id="contact-list">
+                <li>email</li>
+                <li>twitter</li>
+                <li>LinkedIn</li>
+                <li>GitHub</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- project-panel -->
+          <section id="pdetail-panel" class="panel" role="region">
+            <h1>Project Detail</h1>
+            <div id="projectD-body">
+              <h2 id="project-title"><!-- title here --></h2>
+              <div id="project-imgs">
+                <!-- project images here -->
+              </div>
+              <div id="project-links">
+                <!-- project links here -->
+              </div>
+              <div id="project-desc">
+                <!-- project desc here -->
+              </div>
+              <div id="project-tech">
+                <!-- project tech here -->
+              </div>
+            </div>
+          </section>
+        </section>  <!-- *** END OF BODY CONTAINER *** -->
+      </section>    <!-- *** END OF CONTAINER *** -->
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script src="./content.js"></script>
+      <script src="./app.js"></script>
+      <script src="./render.js"></script>
     </body>
 </html>

@@ -4,155 +4,143 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Brian Besaw's Portfolio</title>
-        <link rel="stylesheet" type="text/css" href="./reset.css">
         <link rel="stylesheet" type="text/css" href="./main.css">
-        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
         <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-      <section id="container" role="region">
-        <!-- *** NAV CONTAINER *** -->
-        <section id="nav-container" role="region">
-          
-          <div id="bb">
-            <a href="#front">
-              <span class="bb-logo">BB</span>
-            </a>
-          </div>
-          
-          <div id="nav-items">
-            <ul id="nav-list">
-              <li class="nav-link">
-                <a href="#bio">bio</a>
-              </li>
-              <li class="nav-link">
-                <a href="#projects">projects</a>
-              </li>
-              <li class="nav-link">
-                <a href="#tech">tech</a>
-              </li>
-              <li class="nav-link">
-                <a href="#contact">contact</a>
-              </li>
-            </ul>
-          </div>
-          
-          <div id="nav-contact-items">
-            <a href="mailto:bjbesaw@outlook.com?Subject=Saw%20your%20profile" target="_top">
-              <span class="fa fa-envelope"></span>  <!-- email link and icon here -->
-            </a>
-            <a href="https://twitter.com/besaw_dev" target="_blank">
-              <span class="fa fa-twitter"></span>  <!-- twitter link and icon here -->
-            </a>
-            <a href="https://www.linkedin.com/in/brianbesaw/" target="_blank">
-              <span class="fa fa-linkedin"></span> <!-- linkedIN link and icon here -->
-            </a>
-            <a href="https://github.com/brianjb-lfl" target="_blank">
-              <span class="fa fa-github"></span>  <!-- GitHub link and icon here -->
-            </a>
+      <!-- *** TOP OF CONTAINER *** -->
+      <section class="container" role="region">
+        
+        <!-- *** TOP NAV SECTION *** -->
+        <section class="top-nav main-section flex" role="region">
+
+          <div class="bb nav-group flex">
+            <a href="www.yahoo.com">bb</a>
           </div>
 
-          <div id="hamburger">
-            <div class="hamburger-stripe"></div>
-            <div class="hamburger-stripe"></div>
-            <div class="hamburger-stripe"></div>
+          <div class="nav-items nav-group flex">
+            <div><a href="www.yahoo.com">about</a></div>
+            <div><a href="www.yahoo.com">projects</a></div>
           </div>
 
         </section>
-        <!-- *** END OF NAV CONTAINER *** -->
+        <!-- *** END OF TOP NAV *** -->
 
-        <!-- *** BODY CONTAINER *** -->
-        <section id="body-container" role="region">
-          
-          <a name="front"></a>
-          <!-- front-headline -->
-          <section id="front-panel" class="panel" role="region">
-            <div id="front-headline">
+        <!-- *** CONTENT SECTION *** -->
+        <section class="content-section main-section" role="region">
+          <!-- Front Page -->
+          <div class="front-page content-div flex">
+            <div class="front-headline flex">
               <span class="headline-highlight">Brian Besaw</span>
-              <span class="headline-body">designs cool apps</span>
+              <span class="headline-text">designs cool apps</span>
             </div>
-          </section>
-          
-          <a name="bio"></a>
-          <!-- bio -->
-          <section id="bio-panel" class="panel" role="region">
-            <div class="bio-content">
-              <h1>About Me</h1>
-              <div id="bio-body">
-                <!-- content.bioText here -->
-              </div>  
-            </div>
-          </section>
+          </div>
 
-          <a name="projects"></a>
-          <!-- projects-panel -->
-          <section id="projects-panel" class="panel" role="region">
-            <h1>Projects</h1>
-            <div id="projects-list">
-              <!-- project summaries here -->
+          <!-- About Section -->
+          <div class="about-section content-div">
+            <h1>About me</h1>
+            <div class="about-body about-section">
+                <img class="about-img" src="./img/besawb1708s.jpg"/>
+                <p>Programming is not my vocation – <strong>it’s my passion.</strong>  I love to code cool stuff and see it come to life on the screen.  After over two decades of coding, I’ve got <strong>a lot of tools</strong> in my belt, but Javascript and Python are my favorites. I also enjoy working with databases, as a result of my <strong>finance and accounting background</strong>.</p>
+                <p>When not at a keyboard, I may be found cruising the back roads on my motorcycle, strolling with my dogs, or finding some other way to enjoy the beautiful central Florida climate.</p>
             </div>
-          </section>
-          
-          <a name="tech"></a>
-          <!-- tech-panel -->
-          <section id="tech-panel" class="panel" role="region">
-            <h1>Tech</h1>
-            <div id="tech-body">
-              <ul id="tech-front-end" class="tech-group">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JS</li>
-                <li>jQuery</li>
-                <li>React</li>
-                <li>Redux</li>
-                <li>Angular</li>
-                <li>Python</li>
-              </ul>
-              <ul id="tech-back-end" class="tech-group">
-                <li>Node.js</li>
-                <li>Express</li>
-                <li>RESTful APIs</li>
-                <li>MongoDB</li>
-                <li>Mongoose</li>
+            <div class="about-contact about-section">
+              <ul>
+                <li>
+                  <a href="mailto:bjbesaw@outlook.com?Subject=Saw%20your%20profile" target="_top">
+                    <span class="fa fa-envelope"></span>
+                    <span class="about-contact-list-text">bjbesaw@outlook.com</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/besaw_dev" target="_blank">
+                    <span class="fa fa-twitter"></span>
+                    <span class="about-contact-list-text">@besaw_dev</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/in/brianbesaw/" target="_blank">
+                    <span class="fa fa-linkedin"></span>
+                    <span class="about-contact-list-text">brianbesaw</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/brianjb-lfl" target="_blank">
+                    <span class="fa fa-github"></span>
+                    <span class="about-contact-list-text">brianjb-lfl</span>
+                  </a>
+                </li>
               </ul>
             </div>
-          </section>
+          </div>
 
-          <a name="contact"></a>
-          <!-- contact-panel -->
-          <section id="contact-panel" class="panel" role="region">
-            <h1>Contact Me</h1>
-            <div id="contact-body">
-              <ul id="contact-list">
-                <li>email</li>
-                <li>twitter</li>
-                <li>LinkedIn</li>
-                <li>GitHub</li>
-              </ul>
+          <!-- Project Summaries -->
+          <div class="project-list content-div">
+            <h1>Some of my work</h1>
+            <div class="project-item" id="buzz-kill">
+              <h3>Buzz-Kill</h3>
+              <img class="project-thumbnail" src="./img/buzz-kill-main.png"/>
+              <p>Buzz-Kill helps establishments that serve alcohol provide for their patrons\' safety and guest experience by maintaining a real-time estimate of each patron\'s bac in a user-friendly format.</p>
             </div>
-          </section>
+            <div class="project-item">
+              <h3>Police Code Trainer</h3>
+              <img class="project-thumbnail" src="./img/pcode_question.png"/>
+              <p>This app uses spaced repetition to help police and other emergency personnel to more efficiently learn the communications that are vital to their daily operations.</p>
+            </div>
+          </div>
 
-          <!-- project-panel -->
-          <section id="pdetail-panel" class="panel" role="region">
-            <h1>Project Detail</h1>
-            <div id="projectD-body">
-              <h2 id="project-title"><!-- title here --></h2>
-              <div id="project-imgs">
-                <!-- project images here -->
-              </div>
-              <div id="project-links">
-                <!-- project links here -->
-              </div>
-              <div id="project-desc">
-                <!-- project desc here -->
-              </div>
-              <div id="project-tech">
-                <!-- project tech here -->
-              </div>
-            </div>
-          </section>
-        </section>  <!-- *** END OF BODY CONTAINER *** -->
-      </section>    <!-- *** END OF CONTAINER *** -->
+          <!-- Selected Project Detail -->
+          <div class="project-detail content-div">
+            <h1>Buzz-Kill</h1>
+            <img class="project-img" src="./img/buzz-kill-main.png"/>
+            <p><strong>Summary: </strong>Buzz-Kill helps alcohol-serving establishments provide for their patrons\' safety and guest experience by keeping a running estimate of each guest\'s bac.</p>
+            <span>links:</span>
+            <ul>
+              <li>
+                <span class="link-label">demo</span>
+                <span class="project-link"><a href="https://www.yahoo.com">https://www.yahoo.com</a></span>
+              </li>
+              <li>
+                <span class="link-label">code</span>
+                <span class="project-link"><a href="https://www.yahoo.com">https://www.yahoo.com</a></span>
+              </li>
+            </ul>
+            <span>tech:</span>
+            <ul>
+              <li><span class="tech-list-item">react-redux</span></li>
+              <li><span class="tech-list-item">html</span></li>
+              <li><span class="tech-list-item">css</span></li>
+              <li><span class="tech-list-item">express</span></li>
+              <li><span class="tech-list-item">mongoDB/mongoose</span></li>
+              <li><span class="tech-list-item">enzyme</span></li>
+              <li><span class="tech-list-item">mocha/chai</span></li>
+            </ul>
+          </div>
+        </section>
+        <!-- *** END OF CONTENT *** -->
+
+        <!-- *** FOOTER SECTION *** -->
+        <section class="footer-section main-section flex" role="region">
+          <div class="contact-items flex">
+            <a href="mailto:bjbesaw@outlook.com?Subject=Saw%20your%20profile" target="_top">
+              <span class="fa fa-envelope"></span>
+            </a>
+            <a href="https://twitter.com/besaw_dev" target="_blank">
+              <span class="fa fa-twitter"></span>
+            </a>
+            <a href="https://www.linkedin.com/in/brianbesaw/" target="_blank">
+              <span class="fa fa-linkedin"></span>
+            </a>
+            <a href="https://github.com/brianjb-lfl" target="_blank">
+              <span class="fa fa-github"></span>
+            </a>
+          </div>
+        </section>
+        <!-- *** END OF FOOTER *** -->
+
+      </section>
+      <!-- *** END OF CONTAINER *** -->
+
       <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
       <script src="./content.js"></script>
       <script src="./app.js"></script>

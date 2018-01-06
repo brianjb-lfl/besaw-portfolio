@@ -1,14 +1,26 @@
 * {
-  font-family: 'Arial', 'Helvetica', 'sans-serif';
+  font-family: 'Quicksand', 'sans-serif';
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: white;
+  color: #bbb9c5;
 }
 
 body {
+  height: 95vh;
+  width: 100%;
+  margin: 0 auto;
   font-size: 16px;
-  line-height: 1.5em;
+  line-height: 1.6em;
+  background: black;
+  background-image: url('./img/bo_play_pattern.png');
+  background-repeat: repeat;
+  overflow: auto;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
 }
 
 .hidden {
@@ -20,24 +32,39 @@ body {
 }
 
 h1 {
-  font-size: 2.0em;
+  font-size: 1.9em;
 }
 
 h2 {
-  font-size: 1.5em;
+  font-size: 1.7em;
 }
 
 h3 {
-  font-size: 1.2em;
+  font-size: 1.4em;
 }
 
-.container {
-  background-color: black;
+li {
+  list-style-type: none;
 }
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 1.0em 0;
+}
+
+/* *** Top-Nav *** */
 
 .top-nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
   justify-content: space-between;
-  border: 1px solid yellow;
+  background: black;
+  opacity: 0.8;
+  z-index: 1;
 }
 
 .nav-group, .nav-group a {
@@ -48,53 +75,221 @@ h3 {
 .bb {
   flex: 1;
   justify-content: flex-start;
-  border: 1px solid limegreen;
+  padding-left: 5%;
+  font-size: 1.1em;
 }
 
 .nav-items {
   flex: 1;
   justify-content: space-around;
-  border: 1 px solid aqua;
 }
 
-.front-page {
+.selected {
+  border-bottom: 3px solid #6fe9a6;
+}
+
+/* *** Content *** */
+
+.content-section {
+  height: 122%;
+  padding-top: 10%;
+  margin: 0 5%;
+}
+
+.content-div {
+  height: 100%;
+  width: 100%;
+}
+
+.about-content, .project-item, .pd-box {
+  width: 90%;
+  margin: 4% auto;
+  padding: 15px;
+  background: #185163;
+  border-radius: 6px;
+  opacity: 0.9;
+}
+
+
+/* home section */
+
+.home-section {
+  height: 100%;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .front-headline {
+  height: 100%;
+  width: 82%;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  margin-top: 60%;
 }
 
 .headline-highlight, .headline-text {
   font-size: 2.0em;
-  margin: 6px 0 3px 0;
+  font-weight: 400;
+  margin: 0.2em 0;
+}
+
+.headline-highlight {
+  text-align: left;
+  color: #6fe9a6;
+}
+
+.headline-text {
+  text-align: right;
+}
+
+/* about section */
+
+.about-section {
+  flex-direction: column;
+}
+
+.about-content {
+  font-size: 1.0em;
+  line-height: 1.6em;
+}
+
+
+.about-section img {
+  margin: 2% 0;
 }
 
 .about-img {
-  height: 64px;
+  height: 120px;
+}
+
+.about-body p strong {
+  color: #6fe9a6;
+  font-weight: 400;
+}
+
+.about-contact li {
+  margin: 2% 5%;
+}
+
+.about-contact-list-text {
+  margin-left: 10px;
+}
+
+/* project list section */
+
+.projects-section {
+  flex-direction: column;
+}
+
+.project-item {
+  font-size: 0.9em;
+  line-height: 1.6em;
 }
 
 .project-thumbnail {
   height: 128px;
+  margin: 7px 0;
+}
+
+/* project detail */
+
+.pdetail-section {
+  flex-direction: column;
+}
+
+.pd-box {
+  font-size: 0.9em;
+  line-height: 1.6em;
+}
+
+.pd-box ul {
+  margin-left: 5%;
 }
 
 .project-img {
-  height: 192px;
+  max-width: 50%;
+}
+
+.tech-list-item {
+  display: inline-block;
+  width: 48%;
+}
+
+.pdetail-section a {
+  text-decoration: underline;
+  color: #6fe9a6;
 }
 
 
 
-
+/* *** Footer *** */
 
 .footer-section {
+  height: 3vh;
+  width: 100%;
   justify-content: flex-end;
+  align-items: flex-end;
+  position: fixed;
+  bottom: 0;
+  background: black;
+  opacity: 0.8;
+  z-index: 1;
 }
 
 .contact-items {
-  width: 25%;
+  width: 40%;
   justify-content: space-around;
-  border: 1px solid orange;
 }
 
+.contact-items .fa {
+  color: #5f6068;
+}
+
+/* *** @media *** */ 
+
+@media (min-width: 576px) {
+  
+  body {
+    font-size: 18px;
+  }
+
+  .content-section {
+    height: 122%;
+    padding-top: 10%;
+  }
+
+  .about-content, .project-item, .pd-box {
+    width: 90%;
+    margin: 4% auto;
+    padding: 20px;
+    border-radius: 7px;
+  }
+
+  .headline-highlight, .headline-text {
+    font-size: 2.2em;
+    font-weight: 600;
+  }
+
+}
+
+@media (min-width: 768px) {
+  
+  body {
+    font-size: 20px;
+  }
+
+  .content-section {
+    width: 700px;
+    height: 130%;
+    padding-top: 50px;
+  }
+
+  .about-content, .project-item, .pd-box {
+    width: 90%;
+    margin: 3% auto;
+    padding: 25px;
+    border-radius: 10px;
+  }
+
+}

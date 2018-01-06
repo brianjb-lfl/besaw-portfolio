@@ -20,10 +20,12 @@ function render() {
   // default is 'home' - no programatic render required
   switch(targetPage) {
     case 'about':
+      $('.about-link').addClass('selected');
       $('.about-section').html(getAboutCode());
       break;
 
     case 'projects':
+      $('.projects-link').addClass('selected');
       $('.projects-section').html(getProjectsCode());
       break;
 
@@ -62,7 +64,7 @@ function getAboutCode() {
       `
         <li>
           <a href=${contactItem.href}>
-            <span class=${contactItem.faCode}></span>
+            <span class="${contactItem.faCode}"></span>
             <span class="about-contact-list-text">${contactItem.text}</span>
           </a>
         </li>
@@ -73,15 +75,17 @@ function getAboutCode() {
   // build body code for about section
   let aboutStr = 
     `
-      <h1>About me</h1>
-      <div class="about-body about-sub-section">
-          <img class="about-img" src="${content.aboutContent.imgSrc}"/>
-          ${content.aboutContent.aboutText}
-      </div>
-      <div class="about-contact about-sub-section">
-        <ul>
-          ${contactStr}
-        </ul>
+      <h2>About me</h2>
+      <div class="about-content">
+        <div class="about-body about-sub-section">
+            <img class="about-img" src="${content.aboutContent.imgSrc}"/>
+            ${content.aboutContent.aboutText}
+        </div>
+        <div class="about-contact about-sub-section">
+          <ul>
+            ${contactStr}
+          </ul>
+        </div>
       </div>
     `;
 
@@ -95,7 +99,9 @@ function getProjectsCode() {
       `
         <div class="project-item">
           <h3>${project.title}</h3>
-          <img class="project-thumbnail" id="${project.id}" src="${project.img}"/>
+          <a href="">
+            <img class="project-thumbnail" id="${project.id}" src="${project.img}"/>
+          </a>
           ${project.text}
         </div>
       `
@@ -104,7 +110,7 @@ function getProjectsCode() {
 
   let projectsStr = 
     `
-      <h1>Some of my work</h1>
+      <h2>Some of my work</h2>
       ${projectsListStr}
     `;
 
@@ -118,7 +124,9 @@ function getProjDetailCode(inProjId) {
     return(
       `
         <li>
-          <span class="project-link"><a href="${link.link}">${link.label}</a></span>
+          <span class="project-link">
+            <a href="${link.link}" target="_blank">${link.label}</a>
+          </span>
         </li>
       `
     );
@@ -127,26 +135,29 @@ function getProjDetailCode(inProjId) {
   let projTechStr = projData.tech.map( techItem => {
     return(
       `
-        <li>
           <span class="tech-list-item">${techItem}</span>
-        </li>
       `
     );
   }).join('');
 
   let projectDetStr =
     `
-      <h1>${projData.title}</h1>
-      <img class="project-img" src="${projData.img}"/>
-      <p><strong>Summary:  </strong>${projData.summary}</p>
-      <span><strong>Links:  </strong></span>
-      <ul>
-        ${projLinkStr}
-      </ul>
-      <span><strong>Tech:  </strong></span>
-      <ul>
-        ${projTechStr}
-      </ul>
+      <h2>${projData.title}</h2>
+      <div class="pd-image-box pd-box">
+        <img class="project-img" src="${projData.img}"/>
+      </div>
+      <div class="pd-summary-box pd-box"
+        <p>${projData.summary}</p>
+        <ul>
+          ${projLinkStr}
+        </ul>
+      </div>
+      <div class="pd-tech-box pd-box">
+        <span><strong>Tech:  </strong></span>
+        <ul>
+          ${projTechStr}
+        </ul>
+      </div>
     `;
   
   return projectDetStr;

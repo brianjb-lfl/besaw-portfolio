@@ -6,22 +6,22 @@ const content = {
     [
       {
         href: '"mailto:bjbesaw@outlook.com?Subject=Saw%20your%20profile" target="_top"',
-        faCode: '"fa fa-envelope"',
+        faCode: 'fa fa-envelope',
         text: 'bjbesaw@outlook.com'
       },
       {
         href: '"https://twitter.com/besaw_dev" target="_blank"',
-        faCode: '"fa fa-twitter"',
+        faCode: 'fa fa-twitter',
         text: '@besaw_dev'
       },
       {
         href: '"https://www.linkedin.com/in/brianbesaw/" target="_blank"',
-        faCode: '"fa fa-linkedin"',
+        faCode: 'fa fa-linkedin',
         text: 'brianbesaw'
       },
       {
         href: '"https://github.com/brianjb-lfl" target="_blank"',
-        faCode: '"fa fa-github"',
+        faCode: 'fa fa-github',
         text: 'brianjb-lfl'
       }
     ],
@@ -118,6 +118,4 @@ const content = {
       },
 
     }
-
-
 };

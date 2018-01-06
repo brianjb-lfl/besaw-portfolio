@@ -1,10 +1,14 @@
 'use strict';
 /*global render $  */
 
+//const baseLocationStr = 'file:///C:/Users/bjbes/Documents/PROJECTS/besaw-portfolio/index.html';
+const baseLocationStr = 'http://brianjb.com';
+
+
 function handleLogoClick() {
   $('.bb').on('click', e => {
     e.preventDefault();
-    location.assign('file:///C:/Users/bjbes/Documents/PROJECTS/besaw-portfolio/index.html');
+    location.assign(baseLocationStr);
     render();
   });
 }
@@ -12,9 +16,12 @@ function handleLogoClick() {
 function handleNavItemsClick() {
   $('.nav-items').on('click', 'a', e => {
     e.preventDefault();
-    const locationStr = 
-      'file:///C:/Users/bjbes/Documents/PROJECTS/besaw-portfolio/index.html?page=' + e.target.text;
-    location.assign(locationStr);
+    if($(`.${e.target.text}-section`).hasClass('hidden')) {
+      location.assign(baseLocationStr + '?page=' + e.target.text);
+    }
+    else {
+      location.assign(baseLocationStr);
+    }
   });
 }
 

@@ -28,7 +28,7 @@ const content = {
 
   aboutContent: 
     { 
-      imgSrc: './img/besawb1708s.jpg',
+      imgSrc: './img/bb_2018_01_760.jpg',
       aboutText:
         '<p>Programming is not my vocation – <strong>it’s my passion.</strong>  I love to code cool stuff and see it come to life on the screen.  After over two decades of coding, I’ve got <strong>a lot of tools</strong> in my belt, but Javascript and Python are my favorites. I also enjoy working with databases, as a result of my <strong>finance and accounting background</strong>.</p>' +
         '<p>When not at a keyboard, I may be found cruising the back roads on my motorcycle, strolling with my dogs, or finding some other way to enjoy the beautiful central Florida climate.</p>'

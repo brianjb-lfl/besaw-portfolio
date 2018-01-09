@@ -7,9 +7,10 @@
 }
 
 body {
-  height: 95vh;
+  height: 100vh;
   width: 100%;
   margin: 0 auto;
+  overflow: scroll;
   font-size: 16px;
   line-height: 1.6em;
   background: black;
@@ -58,13 +59,16 @@ p {
 /* *** Top-Nav *** */
 
 .top-nav {
-  width: 100%;
+  width: 100vw;
+  height: 3vh;
   position: fixed;
   top: 0;
   justify-content: space-between;
+  padding: 0 5vw;
   background: black;
   opacity: 0.8;
   z-index: 1;
+  font-size: 0.9em;
 }
 
 .nav-group, .nav-group a {
@@ -91,8 +95,8 @@ p {
 /* *** Content *** */
 
 .content-section {
-  height: 122%;
-  padding-top: 10%;
+  height: 100%;
+  padding: 4vh 0;
   margin: 0 5%;
 }
 
@@ -160,7 +164,7 @@ p {
 }
 
 .about-img {
-  height: 120px;
+  height: 160px;
 }
 
 .about-body p strong {
@@ -221,8 +225,6 @@ p {
   color: #6fe9a6;
 }
 
-
-
 /* *** Footer *** */
 
 .footer-section {
@@ -248,15 +250,22 @@ p {
 
 /* *** @media *** */ 
 
+@media (min-width: 480px) {
+  
+  .top-nav {
+    font-size: 1.0em;
+  }
+
+}
+
 @media (min-width: 576px) {
   
   body {
     font-size: 18px;
   }
 
-  .content-section {
-    height: 122%;
-    padding-top: 10%;
+  .top-nav {
+    font-size: 1.0em;
   }
 
   .about-content, .project-item, .pd-box {
@@ -275,21 +284,12 @@ p {
 
 @media (min-width: 768px) {
   
+  body, .top-nav, .footer-section {
+    width: 768px;
+  }
+
   body {
     font-size: 20px;
-  }
-
-  .content-section {
-    width: 700px;
-    height: 130%;
-    padding-top: 50px;
-  }
-
-  .about-content, .project-item, .pd-box {
-    width: 90%;
-    margin: 3% auto;
-    padding: 25px;
-    border-radius: 10px;
   }
 
 }

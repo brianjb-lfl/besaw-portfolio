@@ -1,8 +1,8 @@
 'use strict';
 /*global render $  */
 
-//const baseLocationStr = 'file:///C:/Users/bjbes/Documents/PROJECTS/besaw-portfolio/index.html';
-const baseLocationStr = 'http://brianjb.com';
+const baseLocationStr = 'file:///C:/Users/bjbes/Documents/PROJECTS/besaw-portfolio/index.html';
+//const baseLocationStr = 'http://brianjb.com';
 
 
 function handleLogoClick() {
@@ -29,7 +29,8 @@ function handleProjClick() {
   $('.projects-section').on('click', 'img', e => {
     e.preventDefault();
     const locationStr = 
-      'file:///C:/Users/bjbes/Documents/PROJECTS/besaw-portfolio/index.html?page=pdetail&proj_id=' + $(e.target).attr('id');
+      `${baseLocationStr}?page=pdetail&proj_id=${$(e.target).attr('id')}`;
+      //'file:///C:/Users/bjbes/Documents/PROJECTS/besaw-portfolio/index.html?page=pdetail&proj_id=' + $(e.target).attr('id');
     location.assign(locationStr);
   });
 }

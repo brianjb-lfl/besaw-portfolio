@@ -64,8 +64,10 @@ const content = {
         img: './img/buzz-kill-main.png',
         summary: 'Buzz-Kill helps alcohol-serving establishments provide for their patrons\' safety and guest experience by keeping a running estimate of each guest\'s bac.',
         links: [
-          {label: 'demo', link: 'https://www.yahoo.com'},
-          {label: 'live', link: 'https://www.yahoo.com'}
+          {label: 'live', link: 'https://buzz-kill-bbp.herokuapp.com/'},
+          {label: 'client code', link: 'https://github.com/brianjb-lfl/buzz-kill-frontend/blob/master/README.md'},
+          {label: 'api', link: 'https://buzz-kill-backend-bbp.herokuapp.com/'},
+          {label: 'api code', link: 'https://github.com/brianjb-lfl/buzz-kill-back'}
         ],
         tech: [
           'javaScript',
@@ -83,8 +85,10 @@ const content = {
         img: './img/pcode_question.png',
         summary: 'This app uses spaced repetition to help police and other emergency personnel to more efficiently learn the communications that are vital to their daily operations.',
         links: [
-          {label: 'demo', link: 'https://www.yahoo.com'},
-          {label: 'live', link: 'https://www.yahoo.com'}
+          {label: 'live', link: 'http://lucid-davinci-0607dd.netlify.com/'},
+          {label: 'client code', link: 'https://github.com/brianjb-lfl/spacedRepetition-client'},
+          {label: 'api', link: 'https://space-repetetion.herokuapp.com/'},
+          {label: 'api code', link: 'https://github.com/giri68/spacedRepetition-server'}
         ],
         tech: [
           'javaScript',
@@ -103,8 +107,8 @@ const content = {
         img: "./img/EM_1.png",
         summary: 'This app provides tools for election managers to set up elections and a place for voters to vote.',
         links: [
-          {label: 'demo', link: 'https://www.yahoo.com'},
-          {label: 'live', link: 'https://www.yahoo.com'}
+          {label: 'live', link: 'https://cryptic-caverns-89599.herokuapp.com/'},
+          {label: 'code', link: 'https://github.com/bmalin92/node-jwt-auth'}
         ],
         tech: [
           'javaScript',

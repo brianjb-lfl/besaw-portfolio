@@ -1,8 +1,8 @@
 'use strict';
 /*global render $  */
 
-const baseLocationStr = 'file:///C:/Users/bjbes/Documents/PROJECTS/besaw-portfolio/index.html';
-//const baseLocationStr = 'http://brianjb.com';
+//const baseLocationStr = 'file:///C:/Users/bjbes/Documents/PROJECTS/besaw-portfolio/index.html';
+const baseLocationStr = 'http://brianjb.com';
 
 
 function handleLogoClick() {

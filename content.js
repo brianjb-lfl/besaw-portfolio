@@ -39,20 +39,26 @@ const content = {
       {
         id: 'buzz_kill',
         title: 'Buzz-Kill',
-        img: './img/buzz-kill-main.png',
+        img: './img/bk-main-450.png',
         text: '<p>Buzz-Kill helps establishments that serve alcohol provide for their patrons\' safety and guest experience by maintaining a real-time estimate of each patron\'s bac in a user-friendly format.</p>'
       },
       {
         id: 'p_code_tnr',
         title: 'Police Code Trainer',
-        img: './img/pcode_question.png',
+        img: './img/pcode-450.png',
         text: '<p>This app uses spaced repetition to help police and other emergency personnel to more efficiently learn the communications that are vital to their daily operations.</p>'
       },
       {
         id: 'elect_mgr',
         title: 'Election Manager',
-        img: './img/EM_1.png',
+        img: './img/em-admin-450.png',
         text: '<p>This app provides tools for election managers to set up elections and a place for voters to vote.</p>'
+      },
+      {
+        id: 'causeway',
+        title: 'CauseWay',
+        img: './img/cause-450.png',
+        text: '<p>Causeway helps those who want to make difference put their talents and resources to use, and helps caring agencies find impactful contributions.</p>'
       }
     ],
   
@@ -61,12 +67,12 @@ const content = {
       default: 'buzz_kill',
       buzz_kill: {
         title: 'Buzz-Kill',
-        img: './img/buzz-kill-main.png',
+        img: './img/bk-main-750.png',
         summary: 'Buzz-Kill helps alcohol-serving establishments provide for their patrons\' safety and guest experience by keeping a running estimate of each guest\'s bac.',
         links: [
-          {label: 'live', link: 'https://buzz-kill-bbp.herokuapp.com/'},
-          {label: 'client code', link: 'https://github.com/brianjb-lfl/buzz-kill-frontend/blob/master/README.md'},
-          {label: 'api', link: 'https://buzz-kill-backend-bbp.herokuapp.com/'},
+          {label: 'live', link: 'https://buzz-kill.herokuapp.com'},
+          {label: 'client code', link: 'https://github.com/jackseabolt/buzz-kill-frontend'},
+          {label: 'api', link: 'https://buzz-kill-back.herokuapp.com'},
           {label: 'api code', link: 'https://github.com/brianjb-lfl/buzz-kill-back'}
         ],
         tech: [
@@ -82,13 +88,13 @@ const content = {
       
       p_code_tnr: {
         title: 'Police Code Trainer',
-        img: './img/pcode_question.png',
+        img: './img/pcode-750.png',
         summary: 'This app uses spaced repetition to help police and other emergency personnel to more efficiently learn the communications that are vital to their daily operations.',
         links: [
-          {label: 'live', link: 'http://lucid-davinci-0607dd.netlify.com/'},
+          {label: 'live', link: 'http://lucid-davinci-0607dd.netlify.com'},
           {label: 'client code', link: 'https://github.com/brianjb-lfl/spacedRepetition-client'},
-          {label: 'api', link: 'https://space-repetetion.herokuapp.com/'},
-          {label: 'api code', link: 'https://github.com/giri68/spacedRepetition-server'}
+          {label: 'api', link: 'https://p-code-server.herokuapp.com'},
+          {label: 'api code', link: 'https://github.com/brianjb-lfl/spacedrepetition-server'}
         ],
         tech: [
           'javaScript',
@@ -104,11 +110,11 @@ const content = {
 
       elect_mgr: {
         title: 'Election Manager',
-        img: "./img/EM_1.png",
+        img: "./img/em-vote-750.png",
         summary: 'This app provides tools for election managers to set up elections and a place for voters to vote.',
         links: [
-          {label: 'live', link: 'https://cryptic-caverns-89599.herokuapp.com/'},
-          {label: 'code', link: 'https://github.com/bmalin92/node-jwt-auth'}
+          {label: 'live', link: 'https://election-manager.herokuapp.com'},
+          {label: 'code', link: 'https://github.com/brianjb-lfl/election-manager'}
         ],
         tech: [
           'javaScript',
@@ -116,6 +122,28 @@ const content = {
           'node.js',
           'Express',
           'Mongodb',
+          'HTML',
+          'CSS'
+        ]
+      },
+
+      causeway: {
+        title: 'CauseWay',
+        img: "./img/cause-750.png",
+        summary: 'CauseWay helps those who want to make difference put their talents and resources to use, and helps caring agencies find impactful contributions.' ,
+        links: [
+          {label: 'live', link: 'http://causeway.netlify.com/'},
+          {label: 'client code', link: 'https://github.com/brianjb-lfl/npmatch'},
+          {label: 'api', link: 'https://dry-escarpment-60455.herokuapp.com'},
+          {label: 'api code', link: 'https://github.com/brianjb-lfl/npm-server'}
+        ],
+        tech: [
+          'javaScript',
+          'React-Redux',
+          'node.js',
+          'Express',
+          'Postgresql',
+          'Knex',
           'HTML',
           'CSS'
         ]

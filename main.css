@@ -1,5 +1,5 @@
 * {
-  font-family: 'Quicksand', 'sans-serif';
+  font-family: 'Didact Gothic', 'sans-serif';
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -7,15 +7,14 @@
 }
 
 body {
-  height: 100vh;
+  min-height: 100vh;
+  max-height: 100%;
   width: 100%;
   margin: 0 auto;
   overflow: scroll;
   font-size: 16px;
   line-height: 1.6em;
-  background: black;
-  background-image: url('./img/bo_play_pattern.png');
-  background-repeat: repeat;
+  background: linear-gradient(#383838, black);
   overflow: auto;
 }
 
@@ -60,7 +59,8 @@ p {
 
 .top-nav {
   width: 100vw;
-  height: 3vh;
+  min-height: 36px;
+  max-height: 3vh;
   position: fixed;
   top: 0;
   justify-content: space-between;
@@ -176,6 +176,10 @@ p {
   margin: 2% 5%;
 }
 
+.about-contact a:hover {
+  font-weight: 600;
+}
+
 .about-contact-list-text {
   margin-left: 10px;
 }
@@ -192,8 +196,15 @@ p {
 }
 
 .project-thumbnail {
-  height: 128px;
-  margin: 7px 0;
+  display: block;
+  width: 75%;
+  margin: 10px auto;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+}
+
+.project-thumbnail:hover {
+  -webkit-filter: grayscale(100%);
 }
 
 /* project detail */
@@ -212,7 +223,9 @@ p {
 }
 
 .project-img {
-  max-width: 50%;
+  display: block;
+  width: 60%;
+  margin: 0 auto;
 }
 
 .tech-list-item {
@@ -228,7 +241,8 @@ p {
 /* *** Footer *** */
 
 .footer-section {
-  height: 3vh;
+  min-height: 36px;
+  max-height: 3vh;
   width: 100%;
   justify-content: flex-end;
   align-items: flex-end;

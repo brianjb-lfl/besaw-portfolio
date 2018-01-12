@@ -30,7 +30,6 @@ function handleProjClick() {
     e.preventDefault();
     const locationStr = 
       `${baseLocationStr}?page=pdetail&proj_id=${$(e.target).attr('id')}`;
-      //'file:///C:/Users/bjbes/Documents/PROJECTS/besaw-portfolio/index.html?page=pdetail&proj_id=' + $(e.target).attr('id');
     location.assign(locationStr);
   });
 }

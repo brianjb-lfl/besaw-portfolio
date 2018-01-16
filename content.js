@@ -49,17 +49,17 @@ const content = {
         text: '<p>This app uses spaced repetition to help police and other emergency personnel to more efficiently learn the communications that are vital to their daily operations.</p>'
       },
       {
+        id: 'causeway',
+        title: 'CauseWay',
+        img: './img/cause-450.png',
+        text: '<p>Causeway helps those who want to make difference put their talents and resources to use, and helps caring agencies find impactful contributions.</p>'
+      },
+      {
         id: 'elect_mgr',
         title: 'Election Manager',
         img: './img/em-admin-450.png',
         text: '<p>This app provides tools for election managers to set up elections and a place for voters to vote.</p>'
       },
-      {
-        id: 'causeway',
-        title: 'CauseWay',
-        img: './img/cause-450.png',
-        text: '<p>Causeway helps those who want to make difference put their talents and resources to use, and helps caring agencies find impactful contributions.</p>'
-      }
     ],
   
   projectDetails:
